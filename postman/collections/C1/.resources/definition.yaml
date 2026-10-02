@@ -1,0 +1,4 @@
+$kind: collection
+description: Demo microservice for managing a product catalog.
+variables:
+  baseUrl: http://localhost:4006

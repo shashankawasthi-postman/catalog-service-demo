@@ -1,0 +1,46 @@
+$kind: http-request
+description: ""
+url: "{{baseUrl}}/products"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "id": "string",
+      "name": "string",
+      "category": "string",
+      "price": 636.5575697473491,
+      "inStock": true
+    }
+  $type: |-
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique product ID"
+        },
+        "name": {
+          "type": "string",
+          "description": "Product name"
+        },
+        "category": {
+          "type": "string",
+          "description": "Product category"
+        },
+        "price": {
+          "type": "number",
+          "description": "Price in USD"
+        },
+        "inStock": {
+          "type": "boolean",
+          "description": "Whether the product is currently in stock"
+        }
+      }
+    }
+settings: {}
+examples: ./.resources/Create a new product.resources/examples
+order: 2000

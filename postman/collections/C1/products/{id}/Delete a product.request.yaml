@@ -1,0 +1,27 @@
+$kind: http-request
+description: ""
+url: "{{baseUrl}}/products/:id"
+method: DELETE
+pathVariables:
+  - key: id
+    value: string
+    disabled: false
+    description: ""
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "value"
+        ]
+      }
+body:
+  type: text
+  content: ""
+settings: {}
+examples: ./.resources/Delete a product.resources/examples
+order: 3000

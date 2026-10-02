@@ -1,0 +1,12 @@
+$kind: http-request
+description: ""
+url: "{{baseUrl}}/products"
+method: GET
+headers:
+  Accept: application/json
+body:
+  type: text
+  content: ""
+settings: {}
+examples: ./.resources/List all products.resources/examples
+order: 1000

@@ -1,0 +1,70 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/products"
+  method: GET
+  headers:
+    Accept: application/json
+  body:
+    type: text
+    content: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      [
+        {
+          "id": "string",
+          "name": "string",
+          "category": "string",
+          "price": 4234.472329196107,
+          "inStock": true
+        },
+        {
+          "id": "string",
+          "name": "string",
+          "category": "string",
+          "price": 8740.495350979132,
+          "inStock": false
+        }
+      ]
+    $type: |-
+      {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "Unique product ID"
+            },
+            "name": {
+              "type": "string",
+              "description": "Product name"
+            },
+            "category": {
+              "type": "string",
+              "description": "Product category"
+            },
+            "price": {
+              "type": "number",
+              "description": "Price in USD"
+            },
+            "inStock": {
+              "type": "boolean",
+              "description": "Whether the product is currently in stock"
+            }
+          },
+          "required": [
+            "id",
+            "name",
+            "category",
+            "price",
+            "inStock"
+          ]
+        }
+      }
+order: 1000

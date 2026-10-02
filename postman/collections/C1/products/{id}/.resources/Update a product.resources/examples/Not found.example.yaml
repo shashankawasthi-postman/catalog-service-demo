@@ -1,0 +1,25 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/products/:id"
+  method: PUT
+  headers:
+    Content-Type: application/json
+  pathVariables:
+    id: string
+  body:
+    type: json
+    content: |-
+      {
+        "id": "string",
+        "name": "string",
+        "category": "string",
+        "price": 636.5575697473491,
+        "inStock": true
+      }
+response:
+  statusCode: 404
+  statusText: Not Found
+  body:
+    type: text
+    content: ""
+order: 2000
