@@ -28,6 +28,10 @@ jobs:
         env:
           POSTMAN_API_KEY: ${{ secrets.POSTMAN_API_KEY }}
         run: postman login --with-api-key "$POSTMAN_API_KEY"
+      - name: Run collection
+        run: postman collection run postman/collections/C1 -e postman/environments/prod
+      - name: Spec Lint
+        run: postman spec lint postman/specs/openapi.yaml
 
       - name: Publish changes to Cloud
         run: postman workspace push -y --report-events
